@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+{% if results|length >= 1 %}
+<h3>Artist search results:</h3>
+   {% for r in results %}
+      <p>{{ r }}</p>
+   {% endfor %}
+
+{% else %}
+No artists have been searched yet, begin searching <a href="/searchartist">here!</a>
+{% endif %}
+
+{% endblock %}
+
+

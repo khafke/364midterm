@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+{% if artists|length >= 1 %}
+<h3>Artists Searched:</h3>
+   {% for a in artists %}
+      <p>{{ a }}</p>
+   {% endfor %}
+
+{% else %}
+No artists have been added to the list yet, add them <a href="/artistadd">here!</a>
+{% endif %}
+
+{% endblock %}
+
